@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_video_play"
+    tools:context="com.example.suraj.petuniverse.VideoPlayActivity"
+    android:background="#dfe3ee">
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/webView"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/relativeLayout3" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="40dip"
+        android:alpha="0.7"
+        android:orientation="horizontal"
+        android:background="#000000"
+        android:id="@+id/relativeLayout3">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/imageButton4"
+                android:src="@drawable/final_home_resize"
+                android:layout_weight="1"
+                android:background="#000000"
+                android:onClick="home" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/imageButton5"
+                android:src="@drawable/share_bot_icon_resize"
+                android:layout_weight="1"
+                android:background="#000000"
+                android:onClick="share" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/imageButton6"
+                android:src="@drawable/logout_icon"
+                android:layout_weight="1"
+                android:background="#000000"
+                android:onClick="logout" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

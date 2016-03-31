@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.suraj.petuniverse.MainActivity"
+    tools:showIn="@layout/app_bar_main"
+    android:background="#dfe3ee">
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/gridLayout">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/imageView2"
+            android:src="@mipmap/ic_launcher"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:cropToPadding="false"
+            android:padding="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:onClick="dogGreyScale" />
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/imageView4"
+            android:src="@mipmap/ic_launcher"
+            android:layout_row="0"
+            android:layout_column="3"
+            android:padding="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:onClick="fishGreyScale" />
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/imageView3"
+            android:src="@mipmap/ic_launcher"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:onClick="catGreyScale" />
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/imageView5"
+            android:src="@mipmap/ic_launcher"
+            android:layout_row="1"
+            android:layout_column="3"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:onClick="birdGreyScale" />
+    </GridLayout>
+
+    <!--<LinearLayout android:id="@+id/footer" android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content" android:orientation="horizontal"-->
+        <!--android:layout_alignParentBottom="true" style="@android:style/ButtonBar">-->
+
+        <!--<Button android:id="@+id/homeButton" android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" android:layout_weight="1"-->
+            <!--android:text="Home" />-->
+
+        <!--<Button android:id="@+id/inviteButton" android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" android:layout_weight="1"-->
+            <!--android:text="Invite" />-->
+
+        <!--<Button android:id="@+id/logoutButton" android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" android:layout_weight="1"-->
+            <!--android:text="Logout"-->
+            <!--android:onClick="logout" />-->
+    <!--</LinearLayout>-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Choose your pet"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        style="@style/Base.TextAppearance.AppCompat.Headline"
+        android:textSize="45dp"
+        android:focusableInTouchMode="false"
+        android:autoText="false" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="40dip"
+        android:alpha="0.8"
+        android:orientation="horizontal"
+        android:background="#000000">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/imageButton4"
+                android:src="@drawable/final_home_resize"
+                android:layout_weight="1"
+                android:background="#000000"
+                android:onClick="home" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/imageButton5"
+                android:src="@drawable/share_bot_icon_resize"
+                android:layout_weight="1"
+                android:background="#000000"
+                android:onClick="share" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/imageButton6"
+                android:src="@drawable/logout_icon"
+                android:layout_weight="1"
+                android:background="#000000"
+                android:onClick="logout" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

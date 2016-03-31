@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.suraj.petuniverse.Nannies"
+    tools:showIn="@layout/activity_nannies"
+    android:background="#dfe3ee">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Pet Sitter"
+        android:id="@+id/nanniesTitle"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="30dp"
+        android:layout_margin="8dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/addNanny"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/nanniesTitle"
+        android:layout_toEndOf="@+id/nanniesTitle"
+        android:onClick="displayAlert"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="3dp" />
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:divider="#00000000"
+        android:dividerHeight="10.0sp"
+        android:background="#dfe3ee"
+        android:id="@+id/custom_list_view_nannies"
+        android:layout_below="@+id/nanniesTitle"
+        android:layout_above="@+id/relativeLayout4" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView3" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/button"
+        android:weightSum="1"
+        android:gravity="top">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/view"
+            android:layout_weight="5.63" />
+    </LinearLayout>
+
+    <!--<LinearLayout android:id="@+id/footer" android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content" android:orientation="horizontal"-->
+        <!--android:layout_alignParentBottom="true" style="@android:style/ButtonBar"-->
+        <!--android:gravity="bottom">-->
+
+        <!--<Button android:id="@+id/homeButton" android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" android:layout_weight="1"-->
+            <!--android:text="Home" />-->
+
+        <!--<Button android:id="@+id/inviteButton" android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" android:layout_weight="1"-->
+            <!--android:text="Invite" />-->
+
+        <!--<Button android:id="@+id/logoutButton" android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" android:layout_weight="1"-->
+            <!--android:text="Logout"-->
+            <!--android:onClick="logout" />-->
+    <!--</LinearLayout>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="40dip"
+        android:alpha="0.7"
+        android:orientation="horizontal"
+        android:background="#000000"
+        android:id="@+id/relativeLayout4">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/imageButton4"
+                android:src="@drawable/final_home_resize"
+                android:layout_weight="1"
+                android:background="#000000"
+                android:onClick="home" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/imageButton5"
+                android:src="@drawable/share_bot_icon_resize"
+                android:layout_weight="1"
+                android:background="#000000"
+                android:onClick="share" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/imageButton6"
+                android:src="@drawable/logout_icon"
+                android:layout_weight="1"
+                android:background="#000000"
+                android:onClick="logout" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
